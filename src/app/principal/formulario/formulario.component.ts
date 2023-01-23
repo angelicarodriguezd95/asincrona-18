@@ -9,13 +9,23 @@ import { UserservicesService } from 'src/app/services/userservices.service';
 })
 export class FormularioComponent {
 
+  response: string = '';
   constructor(private userService: UserservicesService){}
 
   datos : Users= {id: '', name:'', email:''}
+   
 
   onSubmit(){
     this.userService.postUser(this.datos).subscribe(
-      (usuario:Users)=>console.log(usuario)
+      (usuario:Users)=>{
+        console.log(usuario);
+        this.response = JSON.stringify(usuario);
+        console.log(this.response)
+      }
     )
   }
+
+ 
+
+
 }
