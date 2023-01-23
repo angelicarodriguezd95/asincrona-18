@@ -1,0 +1,15 @@
+
+<div class="container-sm p-4 w-50 mt-4 border rounded border-dark shadow p-3">
+  <h1 class="text-center text-dark my-5">Registro de usuario</h1>
+  <form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Nombre:</label>
+  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)]="datos.name" name="email">
+  </div>
+  <div class="form-group mb-2">
+    <label for="email">Email:</label>
+  <input type="email" class="form-control" id="email" [(ngModel)]="datos.email" name="email">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Registrarse</button>
+  </form>
+  </div>
